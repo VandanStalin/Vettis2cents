@@ -75,7 +75,7 @@ a.section-title::after {
     display: none;
 }
 
-@media (max-width: 960px) {
+@media (max-width: 1152px) {
 
     #home #top {
         margin-top: var(--vfoot);
@@ -88,8 +88,11 @@ a.section-title::after {
         width: unset;
     }
 
-    body > main#home {
+    body > main#home,
+    aside.has-crsl {
+        margin: auto;
         width: unset;
+        max-width: var(--max-width);
     }
 
     aside + main#home {
