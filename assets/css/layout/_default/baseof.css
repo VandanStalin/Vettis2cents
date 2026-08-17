@@ -273,10 +273,10 @@ div + #unified-footer {
 
 body {
     --off: #000;
-    --ac: {{ or $light.ac "#36c" }};
+    --ac: {{ or $light.ac "#03b" }};
     --bg: {{ or $light.bg "#f9f9f9" }};
     --fg: {{ or $light.fg "#111" }};
-    --mid:{{ or $light.mid "gray" }};
+    --mid:{{ or $light.mid "#545454" }};
 }
 
 @media (prefers-contrast: more) {
@@ -286,9 +286,7 @@ body {
         {{ end }}
         --bg: {{ or $light.more.bg "#fff" }};
         --fg: {{ or $light.more.fg "#000" }};
-        {{ with $light.more.mid }}
-            --mid: {{ . }};
-        {{ end }}
+        --mid: {{ or $light.more.mid "#595959" }};
     }
 }
 
@@ -299,7 +297,7 @@ body {
         {{ end }}
         --bg: {{ or $light.less.bg "#e7e2e2" }};
         --fg: {{ or $light.less.fg "#13253d" }};
-        --mid:{{ or $light.less.mid "#7d8490" }}
+        --mid:{{ or $light.less.mid "#444850" }}
     }
 }
 
@@ -310,9 +308,7 @@ body {
         --ac: {{ or $dark.ac "#fa0" }};
         --bg: {{ or $dark.bg "#111" }};
         --fg: {{ or $dark.fg "#f9f9f9" }};
-        {{ with $dark.mid }}
-            --mid: {{ . }};
-        {{ end }}
+        --mid:{{ or $dark.mid "#9e9e9e" }};
     }
 
     @media (prefers-contrast: more) {
@@ -322,9 +318,7 @@ body {
             {{ end }}
             --bg: {{ or $dark.more.bg "#000" }};
             --fg: {{ or $dark.more.fg "#fff" }};
-            {{ with $dark.more.mid }}
-                --mid: {{ . }};
-            {{ end }}
+            --mid:{{ or $dark.more.mid "#969696" }};
         }
     }
 
@@ -335,9 +329,7 @@ body {
             {{ end }}
             --bg: {{ or $dark.more.bg "#13253d" }};
             --fg: {{ or $dark.more.fg "#e7e2e2" }};
-            {{ with $dark.more.mid }}
-                --mid: {{ . }};
-            {{ end }}
+            --mid:{{ or $dark.less.mid "#acafb9" }};
         }
     }
 }
