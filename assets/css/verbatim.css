@@ -1,4 +1,4 @@
-/* this part is load balanced to js
+/* this part is load balanced to js, to be adjusted more to get better contrast
 body.deuteranopia {
     --y6a: #d17991; --w8u: #3e8620; --s8i: #ff727b; --n8e: #6f7eb5;
     --m4i: #265245; --y4i: #d61906; --f8a: #8671b2; --s4n: #008ae7;
@@ -216,7 +216,7 @@ pre > code {
 .hljs-bullet,
 .hljs-string,
 .hljs-symbol {
-    color: var(--s8i);
+    color: var(--f8a);
 }
 
 .chroma .no, /* NameConstant */
