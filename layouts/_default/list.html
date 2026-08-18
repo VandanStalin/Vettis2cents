@@ -82,11 +82,11 @@
             main aside */}}
         {{- if and site.Taxonomies.tags $firstPage (ne .Kind "term") }}
             {{- if .IsHome }}
-                <aside id="list-tags">
-                    <header class="section-title" aria-role="heading" aria-level="1">
-                        <strong>{{ i18n "discover" }}</strong>
-                    </header>
-                    <nav aria-label="{{ i18n "discover" }}">
+                <aside id="list-tags" aria-labelledby="discover">
+                    <h1 class="section-title">
+                        <strong id="discover">{{ i18n "discover" }}</strong>
+                    </h1>
+                    <nav aria-labelledby="discover">
                         {{ partial "taxonomies.html" (dict "taxonomy" "tags" "class" "rounded has-hash" "limit" 16) }}
                     </nav>
                     <a class="tr" href="{{ "/tags/" | relLangURL }}">{{ i18n "seeMore" }}</a>
@@ -126,7 +126,7 @@
             feed */}}
         {{- if ne .Kind "taxonomy" }}
             <section id="list-posts" class="pagewidth" {{ if not .IsHome }} aria-labelledby="list-post-heading"{{ end }}>
-                <h1 {{ with .Data.Singular }}id="{{ . }}"{{ end }} class="section-title">
+                <h1 {{ with .Data.Singular }}id="{{ . }}"{{ end }} class="section-title" style="clear: unset;">
                     <strong id="list-post-heading">
                         {{- if .IsHome }}
                             {{- if $firstPage }}
