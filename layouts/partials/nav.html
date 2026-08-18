@@ -14,7 +14,7 @@
         | safeHTML }}
     {{- else }}
         <nav aria-labelledby="{{ $navID }}">
-            <ul role="presentation" class="{{ $navID }} {{if eq $navID "share" }}srm{{ end }}">
+            <ul class="{{ $navID }} {{if eq $navID "share" }}srm{{ end }} presentation">
                 {{- if eq $navID "breadcrumb" }}
                     {{ partial "nav/breadcrumb.html" ( dict "page" $page ) }}
                 {{- else if eq $navID "pagination"}}

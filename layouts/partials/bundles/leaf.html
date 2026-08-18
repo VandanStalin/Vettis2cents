@@ -107,7 +107,7 @@
         {{- "<!-- article audio download -->" | safeHTML }}
         <center>
             <p role="contentinfo">{{ i18n "ifNoAudioSupport" }}</p>
-            <ul role="presentation">
+            <ul class="presentation">
             {{- $fileName := print site.Title " - " .Title }}
             {{- with $audio }}
                 <li>

@@ -17,11 +17,11 @@
     <main id="{{ .Kind }}" {{- if eq .Kind "page" }}class="{{- with .Params.type -}}{{ . }}{{ else }}page{{ end }}"
         {{ end -}}>
         {{ partial "main/header.html" . }}
-        <div id="top" role="presentation">
+        <div id="top">
             {{ block "top" . }}{{ end }}
         </div>
         {{ block "main" . }}{{ end }}
-        <div id="exclude" role="presentation">
+        <div id="exclude">
             {{ "<!-- excluded last block frome some RSS reader and browser reader mode -->" | safeHTML }}
             {{ block "exclude" . }}{{ end }}
         {{ partialCached "main/footer.html" . }}

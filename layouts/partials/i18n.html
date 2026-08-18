@@ -64,7 +64,7 @@
             <span>{{ $page.Lang | upper }}</span>
         </summary>
         <nav aria-label="{{ i18n "selectLang" }}">
-            <ul class="on-plank" role="presentation">
+            <ul class="on-plank presentation">
             {{- range $page.Translations }}
             {{- $label := or .Language.Label .Language.LanguageName }}
             {{- $locale := or .Language.Locale .Language.LanguageCode }}

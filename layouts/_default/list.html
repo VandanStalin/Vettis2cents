@@ -231,7 +231,7 @@
                         {{- $pageGroup = $pageGroup.Reverse }}
                     {{- end }}
                     {{- with $pageGroup }}
-                    <ul class="list-day" role="presentation">
+                    <ul class="list-day presentation">
                         {{- range . }}
                         {{- $date := .Date.Format "2 Jan " }}
                         <li>

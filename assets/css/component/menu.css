@@ -1,7 +1,8 @@
 ul.delimiter,
 ul.breadcrumb,
 nav > ul,
-ul[role=presentation] {
+ul[role=presentation],
+ul.presentation {
     margin: 0;
     list-style: none;
     font-size: inherit;

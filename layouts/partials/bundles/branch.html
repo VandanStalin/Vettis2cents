@@ -7,7 +7,7 @@
     {{- $limit := .limit }}
     {{- $withPages := .withPages }}
     {{- with index site.Taxonomies $taxonomy }}
-        <ul class="{{ $class }}" role="presentation">
+        <ul class="{{ $class }} presentation">
             {{- $index := 0 }}
             {{ range .ByCount -}}
                 {{- $index = add $index 1 }}
@@ -27,7 +27,7 @@
                             <span>{{ .Page.Title }}</span>
                         </a>
                         {{- if $withPages }}
-                            <ul role="presentation">
+                            <ul class="presentation">
                                 {{- range first 5 $pages }}
                                     <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
                                 {{- end }}
@@ -55,7 +55,7 @@
                 <a href="{{ .RelPermalink }}" {{ if eq $tabindex "-1" }}tabindex="-1"{{ end }}>{{ .Page.Title }}</a>
             {{- end }}
         {{- else }}
-            <ul class="{{ $class }}" role="presentation">
+            <ul class="{{ $class }} presentation">
                 {{- range . }}
                     <li><a href="{{ .RelPermalink }}" {{ if eq $tabindex "-1" }}tabindex="-1"{{ end }}>{{ .Page.Title }}</a></li>
                 {{- end }}
@@ -140,7 +140,7 @@
     {{- $cover := .cover }}
     {{- $getCover := .Resources.GetMatch "cover.*" }}
     {{- with $page.Sections }}
-        <ul class="{{ $class }}" role="presentation">
+        <ul class="{{ $class }} presentation">
             {{- $index := 0 }}
             {{- range . }}
                 {{- $index = add $index 1 }}
@@ -185,7 +185,7 @@
             {{- $numSlides := len . }}
             {{- if gt $numSlides 2 }}
                 <nav class="crsl__nav" aria-label="{{ i18n "slide" }}">
-                    <ul class="rounded invert" role="presentation">
+                    <ul class="rounded invert presentation">
                         {{- range $index, $slide := . }}
                             <li>
                                 <a href="#slide-{{ add $index 1 }}" role="button" aria-controls="slide-{{ add $index 1 }}">
