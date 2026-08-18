@@ -50,7 +50,7 @@ a11y.innerHTML = `
   <kbd class="key" aria-hidden="true" data-key="a"></kbd>
 </summary>
 <!-- a11y console -->
-<fieldset id="a11y" role="region" aria-label="${i18nAccessibility}">
+<fieldset id="a11y" aria-label="${i18nAccessibility}">
   <!-- optimizeSR -->
   <div id="optimizeSR">
     <input id="useSR" class="toggle" type="checkbox" onclick="useSreenReader()">
