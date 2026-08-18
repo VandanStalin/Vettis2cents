@@ -3,7 +3,7 @@ cover: 'https://raw.githubusercontent.com/foxihd/hugo-et-hd/master/static/svg/fl
 keepAspectRatio: true
 ---
 
-## Hero Section / Greeter
+# Hero Section / Greeter
 
 **This exampleSite is deployed on Github Pages within it's theme repository.**
 

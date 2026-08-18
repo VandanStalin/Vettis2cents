@@ -83,7 +83,7 @@
         {{- if and site.Taxonomies.tags $firstPage (ne .Kind "term") }}
             {{- if .IsHome }}
                 <aside id="list-tags">
-                    <header class="section-title">
+                    <header class="section-title" aria-role="heading" aria-level="1">
                         <strong>{{ i18n "discover" }}</strong>
                     </header>
                     <nav aria-label="{{ i18n "discover" }}">
@@ -126,7 +126,7 @@
             feed */}}
         {{- if ne .Kind "taxonomy" }}
             <section id="list-posts" class="pagewidth" {{ if not .IsHome }} aria-labelledby="list-post-heading"{{ end }}>
-                <header {{ with .Data.Singular }}id="{{ . }}"{{ end }} class="section-title">
+                <h1 {{ with .Data.Singular }}id="{{ . }}"{{ end }} class="section-title">
                     <strong id="list-post-heading">
                         {{- if .IsHome }}
                             {{- if $firstPage }}
@@ -152,7 +152,7 @@
                         {{- end }}
                     </strong>
                     <hr class="hide"/>
-                </header>
+                </h1>
                 {{- /*
 
                     list post */}}
@@ -211,7 +211,7 @@
     {{- range $yearGroup }}
     {{- $year := .Key }}
     <div class="list-year textwidth {{ if $descending }}descending{{ end }}" role="listitem" aria-labelledby="{{ .Key }}">
-        <strong id="{{ $year }}" class="section-title" role="heading" aria-level="1">{{ $year }}</strong>
+        <strong id="{{ $year }}" class="section-title">{{ $year }}</strong>
         <div role="list" aria-label="{{ $year }}">
             {{- $monthGroup := .Pages.GroupByDate "January" }}
             {{- if $descending }}
@@ -223,7 +223,7 @@
             <div role="listitem" aria-labelledby="{{ print "y" $year "-" $month }}">
                 <details aria-expanded="true" class="list-month" open>
                     <summary class="has-post section-title" id="{{ print "y" $year "-" $month }}"
-                        role="heading" aria-level="2" aria-label="{{- $month }}" aria-description="{{ $postCounter }}">
+                       aria-label="{{- $month }}" aria-description="{{ $postCounter }}">
                         {{- $month }}
                     </summary>
                     {{- $pageGroup := .Pages }}
@@ -236,7 +236,7 @@
                         {{- $date := .Date.Format "2 Jan " }}
                         <li>
                             <a class="has-pre" href="{{ .RelPermalink }}" aria-label="{{.Title}}" aria-description="{{ $date }}">
-                                <span>{{.Title}}</span>
+                                <span role="heading" aria-level="2">{{.Title}}</h2>
                             </a>
                         </li>
                         {{- end }}
@@ -273,7 +273,7 @@
                 <!-- hfill -->
             </div>
             <a href="{{ .page.RelPermalink }}" class="sr0" tabindex="-1" aria-describedby="{{ printf "desc-%d" .counter }}">
-                <h1 id="{{ printf "title-%d" .counter }}">{{ .page.Title }}</h1>
+                <h2 id="{{ printf "title-%d" .counter }}">{{ .page.Title }}</h2>
             </a>
         </hgroup>
         <a class="sri" href="{{ .page.RelPermalink }}" aria-label="{{ .page.Title }}" aria-describedby="{{ printf "desc-%d" .counter }}"></a>
