@@ -45,7 +45,7 @@ const {
     i18nNolocalstorage
 } = a11y.dataset;
 a11y.innerHTML = `
-<summary id="has-a11y-summary" accesskey="a" aria-keyshortcuts="a">
+<summary id="has-a11y-summary" accesskey="a">
   <span>&nbsp;${i18nAccessibility}</span>
   <kbd class="key" aria-hidden="true" data-key="a"></kbd>
 </summary>
@@ -245,7 +245,7 @@ addEvent(document, 'DOMContentLoaded', () => {
 isPage = getElement('page');
 if (isPage) {
     getElement('focusMode').innerHTML = `
-    <input id="defocusAuxElement" accesskey="d" type="checkbox" onclick="focusMode()" aria-keyshortcuts="d" aria-label="${i18nFocusmode}">
+    <input id="defocusAuxElement" accesskey="d" type="checkbox" onclick="focusMode()" aria-label="${i18nFocusmode}">
     <label id="focusModeButton" for="defocusAuxElement" aria-label="${i18nFocusmode}">
         ⦿ <span class="t" role="tooltip">${i18nFocusmode}</span>
     </label>
