@@ -26,6 +26,11 @@
     font-family: var(--sf), sans-serif;
 }
 
+.center,
+.centering {
+    text-align: center;
+}
+
 h1 + p,
 h2 + p,
 h3 + p,

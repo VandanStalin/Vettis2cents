@@ -110,7 +110,7 @@ a11y.innerHTML = `
   <!-- a11y-menu -->
   <menu id="a11y-menu" class="hide" role="toolbar" aria-label="${i18nMenucontrols}"></menu>
   <!-- noLocalStorage -->
-  <center id="noLocalStorage" class="hide" role="alert">${i18nNolocalstorage}</center>
+  <div id="noLocalStorage" class="hide" role="alert">${i18nNolocalstorage}</div>
 </fieldset>
 <div class="screening" role="presentation" aria-hidden="true" onclick="closeA11yConsole()"></div>
 `;
@@ -312,7 +312,7 @@ function hasLocalStorage() {
         return true;
     } catch(e) {
         defaultContrast.checked = true;
-        getElement('noLocalStorage').className = '';
+        getElement('noLocalStorage').className = 'center';
         {{ if site.Params.giscus.repo }}
             if (getElement('noDOMGiscus')) {
                 getElement('noDOMGiscus').removeAttribute('class');

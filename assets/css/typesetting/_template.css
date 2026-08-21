@@ -187,11 +187,6 @@
         align-self: center;
     }
 
-    .center,
-    .centering {
-        text-align: center;
-    }
-
     .justifying {
         text-align: justify;
     }
