@@ -6,7 +6,7 @@
 {{- if eq $menuID "footer" }}
     {{- with index site.Menus "footer" }}
     <nav id="menu-footer" class="has-aria-label-top" aria-label="{{ i18n "keepInTouch" }}">
-        <ul role="presentation">
+        <ul class="presentation">
         {{- range . }}
             {{- $label := or .Name .Pre .Identifier }}
             <li><a href="{{ .URL }}" aria-label="{{ $label }}">
