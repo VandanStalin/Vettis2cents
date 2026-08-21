@@ -6,8 +6,8 @@
     <div id="useBionRead" class="sri"></div>
     {{ "<!-- [top] bypass block -->" | safeHTML }}
     <nav aria-label="{{ i18n "bypass" }}">
-        <a id="to-top" class="srm" href="#top" title="{{ i18n "toTop" }}" accesskey="c" aria-label="{{ i18n "toTop" }}">
-            <span class="t srt">{{ i18n "toTop" }}</span>
+        <a id="to-top" class="srm" href="#top" accesskey="c" aria-labelledby="top-label">
+            <span class="t srt" id="top-label">{{ i18n "toTop" }}</span>
             <kbd class="key" aria-hidden="true" data-key="c"></kbd>
         </a>
     </nav>
