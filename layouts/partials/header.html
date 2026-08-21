@@ -5,9 +5,11 @@
 
         skipper/bypass block [KB] */}}
     <nav aria-label="{{ i18n "bypass" }}">
-        {{- $content := "content" }}
-        {{- if not .IsPage }}
+        {{- $content := "top" }}
+        {{- if .IsHome }}
             {{- $content = "list-posts" }}
+        {{ else if .IsPage }}
+            {{- $content = "content" }}
         {{- end }}
         <a id="to-content" href="{{ printf "#%s" $content }}" aria-label="{{ i18n "toContent" }}">
             <span>{{ i18n "toContent" }}</span>
