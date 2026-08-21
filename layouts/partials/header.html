@@ -11,8 +11,8 @@
         {{ else if .IsPage }}
             {{- $content = "content" }}
         {{- end }}
-        <a id="to-content" href="{{ printf "#%s" $content }}" aria-label="{{ i18n "toContent" }}">
-            <span>{{ i18n "toContent" }}</span>
+        <a id="to-content" href="{{ printf "#%s" $content }}" aria-labelledby="content-label">
+            <span id="content-label">{{ i18n "toContent" }}</span>
             <kbd class="key" aria-hidden="true" data-key="c"></kbd>
             <span class="screening" aria-hidden="true"></span>
         </a>
