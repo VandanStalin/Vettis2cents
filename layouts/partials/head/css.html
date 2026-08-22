@@ -55,6 +55,7 @@
 
 {{- /*--------------------------- layout ---------------------------*/}}
 {{- $baseSty:= slice
+    (resources.Get "css/root.css")
     (resources.Get "css/layout/_default/baseof.css")
     (resources.Get "css/typesetting/default.css")
     (resources.Get "css/typesetting/sectioning.css")
@@ -121,7 +122,7 @@
 
 {{- $print := resources.Get "css/media/print.css" }}
 {{- $custom := resources.Get "css/custom.css" }}
-{{- $order := $baseFonts | append $baseSty | append $extrasSty | append $print $custom }}
+{{- $order := $baseSty | append $baseFonts | append $extrasSty | append $print $custom }}
 {{- $hugo_brewm := resources.Concat "hugo-brewm.css" $order }}
 
 {{- with $hugo_brewm }}

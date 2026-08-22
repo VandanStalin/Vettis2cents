@@ -43,10 +43,10 @@ function bionRead() {
         });
 
         // make 'floated' text slices less contrast
-        htmlSty.setProperty('--fg', lightSwitch.checked ? '#333' : '#ccc');
+        rootSty.setProperty('--fg', lightSwitch.checked ? '#333' : '#ccc');
 
         // make 'anchored' text slices a bit weighted
-        htmlSty.setProperty('--bion', '0.028em');
+        rootSty.setProperty('--bion', '0.028em');
     } else {
         // restore snapshot
         bionReadMainContent.innerHTML = bionReadSnapshot.innerHTML;
@@ -55,8 +55,8 @@ function bionRead() {
         bionReadSnapshot.innerHTML = '';
 
         // restore style
-        htmlSty.removeProperty('--fg');
-        htmlSty.removeProperty('--bion');
+        rootSty.removeProperty('--fg');
+        rootSty.removeProperty('--bion');
 
         // reset color settings
         setColor();
