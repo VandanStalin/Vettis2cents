@@ -16,26 +16,7 @@
     {{ with .OutputFormats.Get "rss" -}}
         {{ printf `<link rel="%s" type="%s" href="%s" title="%s (RSS)" />` .Rel .MediaType.Type .Permalink $title | safeHTML }}
     {{ end -}}
-    <script>
-        if (localStorage.getItem('scheme')) {
-            document.documentElement.classList.add(localStorage.scheme);
-            document.addEventListener('DOMContentLoaded', () => {
-                setTimeout(() => document.documentElement.removeAttribute('class'), 200);
-            });
-        }
-    </script>
-    <style>
-        html.light,
-        html.light #background-body,
-        html.light .background {
-            background: {{ or site.Params.style.light.bg "#f9f9f9" }};
-        }
-        html.dark,
-        html.dark #background-body
-        html.dark .background {
-            background: {{ or site.Params.style.dark.bg "#111" }};
-        }
-    </style>
+    {{ partialCached "head/flashguard.html" . -}}
     {{ partialCached "head/js.html" . -}}
     {{ partialCached "head/css.html" . -}}
     {{- with .Resources.GetMatch "*.css" }}
@@ -43,3 +24,25 @@
     {{- end }}
     {{ partial "head/css/inline.html" . -}}
 {{ end }}
+
+{{- define "partials/head/flashguard.html" -}}
+    {{/*  minimizing background flashes or flickering during the loading process  */}}
+    <script>
+        if (localStorage.getItem('scheme')) {
+            document.documentElement.classList.add(localStorage.scheme);
+            document.addEventListener('DOMContentLoaded', () => {
+                document.documentElement.removeAttribute('class');
+            });
+        }
+    </script>
+    <style>
+        html.light #background-body,
+        html.light .background {
+            background: {{ or site.Params.style.light.bg "#f9f9f9" }};
+        }
+        html.dark #background-body,
+        html.dark .background {
+            background: {{ or site.Params.style.dark.bg "#111" }};
+        }
+    </style>
+{{- end }}
