@@ -4,7 +4,7 @@
 
 ![Minimum Hugo Version: v.0.141.0](https://img.shields.io/static/v1?label=Hugo&message=&ge;%20v0.141.0&color=ca187d&logo=hugo)
 ![CSS baseline 2020](https://img.shields.io/static/v1?label=Baseline&message=2020&color=e44d26&logo=css&logoColor=e44d26)
-![Javascript baseline 2019](https://img.shields.io/static/v1?label=Baseline&message=2019&color=f7df1e&logo=javascript)
+![Javascript ECMAScript 2019](https://img.shields.io/static/v1?label=ES&message=10&color=f7df1e&logo=javascript)
 ![GitHub License: MIT](https://img.shields.io/github/license/foxihd/hugo-brewm)
 ![GitHub Code Size](https://img.shields.io/github/languages/code-size/foxihd/hugo-brewm?color=00bce2)
 ![GitHub Repo Size](https://img.shields.io/github/repo-size/foxihd/hugo-brewm)
@@ -37,6 +37,11 @@ _**Figure 2.** Side-by-side windows demonstrating multiple platform supports; Ly
     | fediscuss.min.js   |  ~3.8KB |  ~4.3KB | Discuss over Mastodon & Bluesky, load if required |
   
     _**Table 1.** All hugo-brewm's web assets that may be fetched once and reusable for thousands of pages until the cache is purged or expired._
+
+> [!IMPORTANT]
+> There is no guarantee regarding accessibility.
+> Meanwhile this theme is capable of achieving WAVE's AIM Score of >9, the outcome ultimately depends on content authoring.
+> Always use alt text, pay attention to content structure, and use accent colors with sufficient contrast.
 
 ## Acknowledgement
 
