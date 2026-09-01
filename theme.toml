@@ -23,6 +23,9 @@ features = [
     ]
 min_version = "0.141.0"
 
+[site]
+    author = this
+    
 [author]
     name = "Foxx"
     homepage = "https://foxx.ink"
