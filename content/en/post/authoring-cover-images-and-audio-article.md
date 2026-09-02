@@ -1,85 +1,22 @@
 ---
-title: "Authoring Cover Images and Audio Articles"
-date: 2025-02-22
-description: "A guide on adding cover images and audio articles"
-draft: false
-author: "Author Name"
+title: "I got my code goblin to build me a site"
+date: 2026-09-01
+description: "I am lost when it comes to the whole setup of this website"
+draft: true
+author: "A Vandan"
 type: "post"
-tags: ["authoring", "content", "media", "audio", "cover", "images", "alt"]
-categories: ["authoring"]
+tags: ["learning", "fucking around and finding out", "media", "audio", "cover", "images", "alt"]
+categories: ["Growth"]
 cover: 'https://upload.wikimedia.org/wikipedia/commons/4/4d/Cat_and_styrofoam_%E2%80%93_electrostatic_charge_%28235112299%29.jpg'
 alt: 'Cat named Cooper with styrofoam on his fur due to electrostatic charge.'
 translationKey: 'media'
 stage: 'budding'
-bsky: "https://bsky.app/profile/808.foxx.ink/post/3lknem6ci2s2h"
+bsky: "adhavansivaraj.xyz"
+
+
 ---
 
-## Adding Cover Images
-
-### Assign The Cover Images
-
-To add a cover image to your article, you have two options:
-
-1. Front Matter Method
-
-You can use either `cover` or `images` parameter for the images source.
-And `alt`, `coverAlt` or `imagesAlt` parameter for alt text.
-
-```yaml
----
-title: "My Article"
-images: "images/my-cover.jpg"
-alt: "Description of the images"
----
-```
-
-2. Page Bundle Method
-
-- Create a folder for your post
-- Name your image `cover.*`
-- Place it in the same folder as your content
-- Set the alt text in your post frontmatter
-
-### Place The Cover
-
-You can place your featured images in various layout, anywhere on article content with `{{</* figure */>}}` shortcode:
-
-```toml
-{{</* figure src="cover" caption="alt" */>}}
-```
-
-This is freedom of authoring!
-
-{{< figure src="cover" caption="alt" >}}
-
-
-## Adding Audio Articles
-
-1. Front Matter Method
-
-```yaml
----
-title: "My Article"
-audio: "audio/my-audio.ogg"
----
-```
-
-2. Page Bundle Method
-
-You can upload multiple audio format with this method:
-
-- Create a folder for your post
-- Name your audio `audio.*`
-- Place it in the same folder as your content
-
-## Page Bundle Method Examples
-
-Here's how your folder structure should look:
-
-    content/
-    └── posts/
-        └── my-article/
-            ├── index.md
-            ├── cover.jpg
-            ├── audio.mp3
-            └── audio.ogg
+## So is this how I edit ?
+I think often about what it is to learn a language without the porper syntax. 
+My foray into building a site is vaguely simillar to how i see myself learning kannada. 
+Strininging words like a caveman and hope that the person on the other end understands what I am trying to say. Unlike the warmth of the human who lives with me. My computer is far less forgiving. I must learn its processes if I am to somehow learn to dump all that's in my mind to somewhere on the internet. 
