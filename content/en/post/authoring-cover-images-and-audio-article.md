@@ -6,12 +6,12 @@ draft: true
 author: "A Vandan"
 type: "post"
 tags: ["learning", "fucking around and finding out", "media", "audio", "cover", "images", "alt"]
-categories: ["Growth"]
+categories: ["Authoring"]
 cover: 'https://upload.wikimedia.org/wikipedia/commons/4/4d/Cat_and_styrofoam_%E2%80%93_electrostatic_charge_%28235112299%29.jpg'
 alt: 'Cat named Cooper with styrofoam on his fur due to electrostatic charge.'
 translationKey: 'media'
 stage: 'budding'
-bsky: "adhavansivaraj.xyz"
+bsky: ""
 
 
 ---
@@ -20,3 +20,5 @@ bsky: "adhavansivaraj.xyz"
 I think often about what it is to learn a language without the porper syntax. 
 My foray into building a site is vaguely simillar to how i see myself learning kannada. 
 Strininging words like a caveman and hope that the person on the other end understands what I am trying to say. Unlike the warmth of the human who lives with me. My computer is far less forgiving. I must learn its processes if I am to somehow learn to dump all that's in my mind to somewhere on the internet. 
+How else will I metamorphosize?!
+
