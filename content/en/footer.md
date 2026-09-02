@@ -14,6 +14,26 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 <br>
 
+<audio id="startup-audio" src="D:\vandanswebbie\Vettis2cents\content\en" preload="auto"></audio>
+
+<script>
+  function playStartupAudio() {
+    const audio = document.getElementById('startup-audio');
+    if (audio) {
+      audio.play().catch(error => {
+        console.log("Autoplay prevented. Waiting for user interaction.");
+      });
+    }
+    // Remove listeners so it only plays once
+    document.removeEventListener('click', playStartupAudio);
+    document.removeEventListener('keydown', playStartupAudio);
+  }
+
+  // Fallback for browser autoplay restrictions
+  document.addEventListener('click', playStartupAudio);
+  document.addEventListener('keydown', playStartupAudio);
+</script>
+
 <fieldset id=cookie-banner>
 <legend>Cookie Banner</legend>
 <div>
