@@ -1,7 +1,7 @@
 ---
-title: "Realising my code goblin was right"
+title: "I think often about the nature of solitude"
 date: 2026-09-02
-description: "I am further lost when it comes to the whole setup of this website"
+description: "I can't sleep. There are monsters under my heart"
 draft: false
 author: "A lost Vandan"
 type: "post"

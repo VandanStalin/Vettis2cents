@@ -1,7 +1,7 @@
 ---
-title: "Realising my code goblin was right"
+title: "The beauty of the things I cant capture."
 date: 2026-09-02
-description: "I am further lost when it comes to the whole setup of this website"
+description: "Finding my way"
 draft: false
 author: "A lost Vandan"
 type: "post"
